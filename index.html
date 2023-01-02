@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.cdnfonts.com/css/palatino" rel="stylesheet" />
+    <title>to do app</title>
+  </head>
+  <body>
+    <header>
+      <section class="greeting">
+        <h2 class="title">
+          HELLO <input type="text" id="name" placeholder="your name" />
+        </h2>
+      </section>
+      <button class="mode dark">DARK MODE</button>
+      <button class="mode light">LIGHT MODE</button>
+    </header>
+    <main class="app">
+      <section class="create-todo">
+        <h3>CREATE TO DO LIST</h3>
+        <form id="new-todo-form">
+          <h4>what should you do today?</h4>
+          <input
+            type="text"
+            name="content"
+            id="content"
+            placeholder="e.g coding"
+          />
+          <h4>CHOOSE PRIORITY</h4>
+          <div class="options">
+            <label>
+              <input type="radio" name="category" id="category1" value="high" />
+              <span class="color high"></span>
+              <div id="high-label">HIGH</div>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category2"
+                value="medium"
+              />
+              <span class="color medium"></span>
+              <div id="medium-label">MEDIUM</div>
+            </label>
+            <label>
+              <input type="radio" name="category" id="category3" value="low" />
+              <span class="color low"></span>
+              <div id="low-label">LOW</div>
+            </label>
+          </div>
+          <input type="submit" value="ADD TODO" />
+        </form>
+      </section>
+      <section class="todo-list">
+        <h3 id="list-label"></h3>
+        <div class="list" id="todo-list">
+          <div id="item-high" class="todo-item">
+            <label>
+              <input type="checkbox" />
+              <span class="color high"></span>
+            </label>
+            <div class="todo-content">
+              <input type="text" value="coding" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">edit</button>
+              <button class="delete">delete</button>
+            </div>
+          </div>
+          <div id="item-medium" class="todo-item">
+            <label>
+              <input type="checkbox" />
+              <span class="color medium"></span>
+            </label>
+            <div class="todo-content">
+              <input type="text" value="get some bread" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">edit</button>
+              <button class="delete">delete</button>
+            </div>
+          </div>
+          <div id="item-low" class="todo-item">
+            <label>
+              <input type="checkbox" />
+              <span class="color low"></span>
+            </label>
+            <div class="todo-content">
+              <input type="text" value="wath movie" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">edit</button>
+              <button class="delete">delete</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
